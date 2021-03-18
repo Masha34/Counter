@@ -26,7 +26,6 @@ const Counter = ( {counter, counterPlus, counterMinus, counterPlusTwo, counterMi
 // const mapStateToProps = (props) => {
 //     console.log("mapStateToProps", props)
 // }
-
 const mapStateToProps = ({ CounterReducer }) => {
     console.log("mapStateToProps ", CounterReducer)
     const { counter } = CounterReducer;
