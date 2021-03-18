@@ -44,11 +44,11 @@ div {
   background-color: #717fe0 !important;
 }
 /*Prevent text selection*/
-span{
+/* span{
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
+} */
 input{  
   border: 0;
   width: 2%;
