@@ -9,6 +9,10 @@ const CounterReducer = (state = initialState, action) => {
                 return {
                     counter: state.counter +=1
                 }
+            case "MINUS":
+                return {
+                    counter: state.counter -=1
+                }
                 default:
                     return state;
         }

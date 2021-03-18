@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import { counterPlus } from "../../Actions/CounterActions"; //коли просто export то ми дістаємо через {} дужки
+import { counterMinus } from "../../Actions/CounterActions"; 
 
 // const Counter = (props) => {
 //     console.log("default props ", props);
-const Counter = ( {counter, counterPlus} ) => {
+const Counter = ( {counter, counterPlus, counterMinus} ) => {
     return (
         <div className="qty mt-5">
-            <span className="minus bg-dark">-</span>
+            <span className="minus bg-dark" onClick={counterMinus}>-</span>
             <input type="number" className="count" name="qty" value={counter} />
             <span className="plus bg-dark" onClick={counterPlus} >+</span>
         </div>
@@ -25,7 +26,8 @@ const mapStateToProps = ({ CounterReducer }) => {
 }
 // ф-ція для підключення action
 const mapDispatchToProps = {
-    counterPlus
+    counterPlus,
+    counterMinus
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Counter); // підключення глобального store
