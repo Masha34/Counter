@@ -8,3 +8,13 @@ export const counterMinus = () => {
         type: "MINUS",
     }
 }
+export const counterPlusTwo = () => {
+    return {
+        type: "PLUSTWO",
+    }
+}
+export const counterMinusTwo = () => {
+    return {
+        type: "MINUSTWO",
+    }
+}
