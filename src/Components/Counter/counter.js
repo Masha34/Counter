@@ -4,10 +4,12 @@ import { counterPlus } from "../../Actions/CounterActions"; //коли прос�
 import { counterMinus } from "../../Actions/CounterActions"; 
 import { counterPlusTwo } from "../../Actions/CounterActions"; 
 import { counterMinusTwo } from "../../Actions/CounterActions"; 
+import { counterMultiplyByTwo } from "../../Actions/CounterActions"; 
+import { counterReset } from "../../Actions/CounterActions"; 
 
 // const Counter = (props) => {
 //     console.log("default props ", props);
-const Counter = ( {counter, counterPlus, counterMinus, counterPlusTwo, counterMinusTwo} ) => {
+const Counter = ( {counter, counterPlus, counterMinus, counterPlusTwo, counterMinusTwo, counterMultiplyByTwo, counterReset} ) => {
     return (
         <div className="qty mt-5">
             <span className="minus bg-dark" onClick={counterMinus}>-</span>
@@ -15,8 +17,8 @@ const Counter = ( {counter, counterPlus, counterMinus, counterPlusTwo, counterMi
             <span className="plus bg-dark" onClick={counterPlus} >+</span>
             <span className="plus bg-dark" onClick={counterPlusTwo} >+2</span>
             <span className="plus bg-dark" onClick={counterMinusTwo} >-2</span>
-            {/* <span className="plus bg-dark" onClick={counterPlus} >*2</span>
-            <span className="plus bg-dark" onClick={counterPlus} >0</span> */}
+            <span className="plus bg-dark" onClick={counterMultiplyByTwo} >*2</span>
+            <span className="plus bg-dark" onClick={counterReset} >0</span>
         </div>
     )
 }
@@ -35,7 +37,9 @@ const mapDispatchToProps = {
     counterPlus,
     counterMinus,
     counterPlusTwo,
-    counterMinusTwo
+    counterMinusTwo,
+    counterMultiplyByTwo,
+    counterReset
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Counter); // підключення глобального store

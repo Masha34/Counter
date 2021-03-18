@@ -18,3 +18,13 @@ export const counterMinusTwo = () => {
         type: "MINUSTWO",
     }
 }
+export const counterMultiplyByTwo = () => {
+    return {
+        type: "MULTIPLYbyTWO",
+    }
+}
+export const counterReset = () => {
+    return {
+        type: "RESET",
+    }
+}
